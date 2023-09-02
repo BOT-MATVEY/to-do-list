@@ -1,0 +1,69 @@
+@import "@assets/styles/variables";
+
+.wrapper {
+    display: flex;
+    align-items: center;
+
+    width: fit-content;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    @include font-tag-m;
+}
+
+.content {
+    padding: 1px 6px 2px;
+}
+
+.gray {
+    color: $primary-gray-dark;
+
+    --bg-color: $neutral-gray;
+
+    .content {
+        background-color: ($neutral-gray);
+    }
+
+    &.arrow {
+        &:after {
+            background-color: ($neutral-gray);
+        }
+    }
+}
+
+.violet {
+    color: white;
+    --border-color: $statuses-violet;
+
+    .content {
+        background-color: ($statuses-violet);
+    }
+
+    &.arrow {
+        &:after {
+            background-color: ($statuses-violet);
+        }
+    }
+}
+
+.arrow {
+    &:after {
+        content: "";
+        display: block;
+        flex-shrink: 0;
+
+        margin: 0 0 0 -10px;
+
+        width: 20px;
+        aspect-ratio: 1;
+
+        border-radius: 4px;
+
+        rotate: 45deg;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+}

@@ -1,0 +1,89 @@
+@import "@assets/styles/variables";
+@import "@assets/styles/utils";
+
+.wrapper {
+    padding: 4px;
+
+    border-radius: $border-radius-m;
+
+    background-color: $neutral-blue;
+
+    $transition-timing-easing: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: translate $transition-timing-easing,
+        scale $transition-timing-easing, background-color 0.3s;
+
+    &:hover {
+        scale: 1.05;
+        translate: 0 -5px;
+        background-color: rgba($color: white, $alpha: 0);
+    }
+}
+
+.card {
+    padding: 10px;
+    @include card-shadow;
+
+    background-color: white;
+    border-radius: $border-radius-m;
+}
+
+.header {
+    margin-bottom: 8px;
+
+    @include line-clamp(3);
+}
+
+.dates {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    margin-bottom: 4px;
+
+    color: $statuses-green;
+    @include font-body-m;
+}
+
+.description {
+    margin-bottom: 8px;
+
+    color: $neutral-black;
+    @include font-body-s;
+
+    @include line-clamp(1);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tagsContainer {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+// ------------------ Card Title -----------------
+
+.title {
+    color: $primary-blue;
+    @include font-body-l;
+
+    &.checked {
+        text-decoration: line-through;
+    }
+    &.unchecked {
+        text-decoration: underline;
+    }
+}
+
+.checkbox {
+    float: left;
+    display: inline;
+    margin-right: 4px;
+
+    translate: 0 4px;
+}

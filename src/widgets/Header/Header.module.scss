@@ -1,0 +1,61 @@
+@import "@assets/styles/variables";
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 24px 0 0;
+}
+
+.day {
+    color: $statuses-green;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.buttonAddNewItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: $border-radius-s;
+    border: none;
+    background-color: $neutral-gray;
+
+    color: $primary-blue;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: $primary-blue;
+        color: white;
+    }
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 6px;
+
+    min-width: 19px;
+    height: 19px;
+
+    background-color: $neutral-gray;
+
+    border: 1px solid $primary-gray-dark;
+    border-radius: $border-radius-s;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0px;
+    text-align: center;
+}

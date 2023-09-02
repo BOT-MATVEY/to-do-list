@@ -1,0 +1,8 @@
+@mixin line-clamp($amount-of-rows) {
+    display: -webkit-box;
+    -webkit-line-clamp: $amount-of-rows;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
