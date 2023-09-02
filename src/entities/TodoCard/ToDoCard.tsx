@@ -5,6 +5,7 @@ import { Tag } from "../../shared/ui/Tag/Tag";
 import { CheckBox } from "../../shared/ui/CheckBox/CheckBox";
 import classNames from "classnames";
 import { ToDoItem } from "../../shared/types";
+import { Avatar } from "../../shared/ui/Avatar/Avatar";
 
 export const ToDoCard = ({
     title,
@@ -33,6 +34,7 @@ export const ToDoCard = ({
                             <Tag {...tag} key={index} />
                         ))}
                     </div>
+                    <Avatar />
                 </div>
             </div>
         </div>

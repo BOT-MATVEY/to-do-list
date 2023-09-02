@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./ToDoList.module.scss";
 import { ToDoItem } from "../../shared/types";
 import { ToDoCard } from "../../entities/TodoCard/ToDoCard";
